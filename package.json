@@ -1,11 +1,13 @@
 {
   "name": "vue-cosha",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "A vue directive for the cosha library",
   "main": "dist/vue-cosha.umd.js",
   "module": "dist/vue-cosha.esm.js",
   "unpkg": "dist/vue-cosha.min.js",
-  "browser": {
-    "./sfc": "src/vue-cosha.vue"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kn0wn/vue-cosha.git"
   },
   "files": [
     "dist/*",
