@@ -1,6 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-import cosha from "./lib";
+import cosha from "../lib";
 
 Vue.config.productionTip = false;
 

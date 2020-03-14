@@ -1,45 +1,32 @@
 {
   "name": "vue-cosha",
   "version": "0.1.0",
-  "description": "A vue directive for cosha",
-  "main": "dist/vue-cosha.cjs.js",
-  "module": "dist/vue-cosha.es2015.js",
-  "jsdelivr": "dist/vue-cosha.js",
-  "unpkg": "dist/vue-cosha.js",
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+  "main": "dist/vue-cosha.umd.js",
+  "module": "dist/vue-cosha.esm.js",
+  "unpkg": "dist/vue-cosha.min.js",
+  "browser": {
+    "./sfc": "src/vue-cosha.vue"
   },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/vue-cosha.umd.js",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/vue-cosha.esm.js",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/vue-cosha.min.js"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.1.1",
-    "@vue/cli-plugin-eslint": "^3.1.1",
-    "@vue/cli-plugin-unit-jest": "^3.1.1",
-    "@vue/cli-service": "^3.1.1",
-    "@vue/eslint-config-prettier": "^5.0.0",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "eslint": "^5.16.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "lint-staged": "^8.1.5",
-    "prettier": "^1.18.2",
+    "@rollup/plugin-buble": "^0.21.1",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-replace": "^2.3.1",
+    "cross-env": "^5.2.0",
+    "minimist": "^1.2.0",
+    "rollup": "^1.14.4",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^4.7.2",
+    "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
   }
 }
