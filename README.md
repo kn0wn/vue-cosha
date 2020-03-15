@@ -30,6 +30,36 @@ Vue.use(VueCosha);
 </template>
 ```
 
+## Nuxt
+
+```
+npm i vue-cosha
+```
+
+Create a file called `vue-chosha.js` in your plugins folder with the following inside
+
+```js
+import Vue from "vue";
+import VueCosha from "vue-cosha";
+
+Vue.use(VueCosha);
+```
+
+Register the plugin in your `nuxt.config.js`
+
+```js
+plugins: [
+    '~/plugins/vue-cosha'
+],
+```
+
+```vue
+<!-- regular old img tag -->
+<template>
+  <img src="my-dope-pic.jpg" alt="mmmhm" v-cosha />
+</template>
+```
+
 ## Config
 
 Everything in the config is optional. The default values are:
