@@ -3,6 +3,7 @@
 </p>
 
 # vue-cosha
+[![latest version on npm](https://img.shields.io/npm/v/vue-cosha)](https://www.npmjs.com/package/vue-cosha) [![npm downloads a month](https://img.shields.io/npm/dm/vue-cosha)](https://www.npmjs.com/package/vue-cosha) [![bundlephobia minified size](https://badgen.net/bundlephobia/min/vue-cosha)](https://bundlephobia.com/result?p=vue-cosha@0.1.1)
 
 Vue cosha is a simple port of the [cosha](https://github.com/robinloeffel/cosha) library for ease of use in Vue projects.
 
@@ -78,4 +79,5 @@ Vue.use(VueCosha, {
 });
 ```
 
-If you like this package please support the original developer!
+## License
+MIT 
