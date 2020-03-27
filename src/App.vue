@@ -2,29 +2,24 @@
   <div id="app">
     <h1>vue-cosha</h1>
 
-    <pre>
-  <code>
-&lt;img v-cosha src="example.jpg" /&gt;
-  </code>
-</pre>
-
     <section class="display">
       <aside>
         <img
           src="https://images.unsplash.com/photo-1583542225715-473a32c9b0ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=450&q=60"
-          v-cosha
+          v-cosha="{ blur: '10px' }"
+          alt="Image from unplash"
         />
       </aside>
       <aside>
         <img
           src="https://images.unsplash.com/photo-1557939403-1760a0e47505?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=450&q=80"
-          v-cosha
+          v-cosha="{ blur: '15px' }"
         />
       </aside>
       <aside>
         <img
           src="https://images.unsplash.com/photo-1583272630857-5a0fd42e611e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=450&q=80"
-          v-cosha
+          v-cosha="{ blur: '20px' }"
         />
       </aside>
     </section>
