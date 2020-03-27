@@ -3,6 +3,7 @@
 </p>
 
 # vue-cosha
+
 [![latest version on npm](https://img.shields.io/npm/v/vue-cosha)](https://www.npmjs.com/package/vue-cosha) [![npm downloads a month](https://img.shields.io/npm/dm/vue-cosha)](https://www.npmjs.com/package/vue-cosha) [![bundlephobia minified size](https://badgen.net/bundlephobia/min/vue-cosha)](https://bundlephobia.com/result?p=vue-cosha@0.1.1)
 
 Vue cosha is a simple port of the [cosha](https://github.com/robinloeffel/cosha) library for ease of use in Vue projects.
@@ -54,13 +55,6 @@ plugins: [
 ],
 ```
 
-```vue
-<!-- regular old img tag -->
-<template>
-  <img src="my-dope-pic.jpg" alt="mmmhm" v-cosha />
-</template>
-```
-
 ## Config
 
 Everything in the config is optional. The default values are:
@@ -69,15 +63,20 @@ Everything in the config is optional. The default values are:
 import VueCosha from "vue-cosha";
 
 Vue.use(VueCosha, {
-  className: "cosha",
   blur: "5px",
   brightness: 1,
   saturation: 1,
   x: 0,
-  y: 0,
-  index: 0
+  y: 0
 });
 ```
 
+You can also add options in the directive to change for that specific element
+
+```vue
+v-cosha="{ blur: '15px' }"
+```
+
 ## License
-MIT 
+
+MIT
