@@ -1,38 +1,19 @@
-import vue from "rollup-plugin-vue";
-import buble from "@rollup/plugin-buble";
-import commonjs from "@rollup/plugin-commonjs";
-import replace from "@rollup/plugin-replace";
-import uglify from "rollup-plugin-uglify-es";
-import minimist from "minimist";
+import nodeResolve from "@rollup/plugin-node-resolve";
+import babel from "rollup-plugin-babel";
 
-const argv = minimist(process.argv.slice(2));
-
-const config = {
+export default {
   input: "lib/index.js",
-  output: {
-    name: "vue-cosha",
-    exports: "named",
-    extend: true
-  },
-  plugins: [
-    replace({
-      "process.env.NODE_ENV": JSON.stringify("production")
-    }),
-    commonjs(),
-    vue({
-      css: true,
-      compileTemplate: true,
-      template: {
-        isProduction: true
-      }
-    }),
-    buble()
+  plugins: [nodeResolve(), babel()],
+  output: [
+    {
+      format: "umd",
+      name: "VueCosha",
+      exports: "named",
+      file: "dist/vue-cosha.js"
+    },
+    {
+      format: "esm",
+      file: "dist/vue-cosha.esm.js"
+    }
   ]
 };
-
-// Only minify browser (iife) version
-if (argv.format === "iife") {
-  config.plugins.push(uglify());
-}
-
-export default config;
