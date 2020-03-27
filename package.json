@@ -1,8 +1,8 @@
 {
   "name": "vue-cosha",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A vue directive for the cosha library",
-  "main": "dist/vue-cosha.umd.js",
+  "main": "dist/vue-cosha.js",
   "module": "dist/vue-cosha.esm.js",
   "unpkg": "dist/vue-cosha.min.js",
   "license": "MIT",
