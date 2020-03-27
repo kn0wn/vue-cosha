@@ -20,8 +20,8 @@
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.config.js --mode development",
     "build": "npm run bundle && npm run bundle:min",
-    "bundle": "rollup -c build/rollup.conf.js",
-    "bundle:min": "rollup -c build/rollup.conf.min.js"
+    "bundle": "rollup -c build/rollup.config.js",
+    "bundle:min": "rollup -c build/rollup.config.min.js"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

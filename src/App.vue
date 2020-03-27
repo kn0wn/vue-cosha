@@ -7,7 +7,7 @@
         <img
           src="https://images.unsplash.com/photo-1583542225715-473a32c9b0ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=450&q=60"
           v-cosha="{ blur: '10px' }"
-          alt="Image from unplash"
+          alt="Image from unsplash"
         />
       </aside>
       <aside>
