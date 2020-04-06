@@ -10,7 +10,7 @@ Vue cosha is a simple port of the [cosha](https://github.com/robinloeffel/cosha)
 
 > "Colorful shadows for your images. 🎨"
 
-[cosha](https://npm.robinloeffel.ch/cosha) lets you add **co**lorful **sha**dows to your images. Try it out and look for yourself—the bundle is only less than 1kb small and it couldn't be easier to set up!
+[cosha](https://npm.robinloeffel.ch/cosha) lets you add **co**lorful **sha**dows to your images. Try it out and look for yourself—the bundle is less than 2kb and it couldn't be easier to use!
 
 ## How
 
