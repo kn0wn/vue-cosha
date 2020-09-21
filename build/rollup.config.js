@@ -9,11 +9,11 @@ export default {
       format: "umd",
       name: "VueCosha",
       exports: "named",
-      file: "dist/vue-cosha.js"
+      file: "dist/vue-cosha.js",
     },
     {
       format: "esm",
-      file: "dist/vue-cosha.esm.js"
-    }
-  ]
+      file: "dist/vue-cosha.esm.js",
+    },
+  ],
 };

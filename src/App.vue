@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: "app"
+  name: "app",
 };
 </script>
 
